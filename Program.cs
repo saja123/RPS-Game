@@ -1,10 +1,21 @@
 ﻿namespace RPS_Game
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            try
+            {
+                RPSGame game = new RPSGame("Saja");
+                game.PlayGame();
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                Console.WriteLine("Thank you for playing");
+            }
         }
     }
 }
